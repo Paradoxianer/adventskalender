@@ -23,7 +23,7 @@ class Adventstuer extends StatelessWidget {
         },
         front: Container(
           decoration: BoxDecoration(
-            color: Color(0xFF770000),
+            color: Color(0xFF993333),
             borderRadius: BorderRadius.all(Radius.circular(8.0)),
           ),
           child: Column(
@@ -59,12 +59,16 @@ class Adventstuer extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(2.0),
                   alignment: Alignment.center,
-                  child: Text(backModel.head),
+                  child: Text(backModel.head,
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                 ),
                 //Body Container
                 Expanded(
                       child: AutoSizeText(backModel.main,
-                              style: Theme.of(context).textTheme.headline1
+                              style: Theme.of(context).textTheme.headline1,
+                              wrapWords: false,
+                              softWrap: true,
                             ),
                   ),
 
@@ -74,7 +78,9 @@ class Adventstuer extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(2.0),
                   alignment: Alignment.centerRight,
-                  child: Text(backModel.footer),
+                  child: Text(backModel.footer,
+                    style: TextStyle(fontStyle: FontStyle.italic),
+                  ),
                 )
               ]
           )

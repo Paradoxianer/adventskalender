@@ -1,12 +1,13 @@
+import 'package:adventscalender/models/back_model.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flip_card/flip_card.dart';
 
 
 class Adventstuer extends StatelessWidget {
-  Adventstuer({required this.Tag, required this.Inhalt});
+  Adventstuer({required this.Tag, required this.backModel});
   final Tag;
-  final Inhalt;
+  final BackModel backModel;
   Widget build(BuildContext context) {
     DateTime date = DateTime.now();
     return Card(
@@ -39,7 +40,7 @@ class Adventstuer extends StatelessWidget {
             color: Color(0xFF007777),
             borderRadius: BorderRadius.all(Radius.circular(8.0)),
           ),
-          child: Center(
+          /*child: Center(
             child:
               Padding(
                 padding: EdgeInsets.all(15),
@@ -47,9 +48,39 @@ class Adventstuer extends StatelessWidget {
                     style: Theme.of(context).textTheme.headline1
                   )
               )
-          ),
-        ),
-      ),
+          ),*/
+          child:
+        Padding(
+        padding: EdgeInsets.all(15),
+          child:  Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                //Header Container
+                Container(
+                  padding: const EdgeInsets.all(2.0),
+                  alignment: Alignment.center,
+                  child: Text(backModel.head),
+                ),
+                //Body Container
+                Expanded(
+                      child: AutoSizeText(backModel.main,
+                              style: Theme.of(context).textTheme.headline1
+                            ),
+                  ),
+
+                //Footer Container
+                //Here you will get unexpected behaviour when keyboard pops-up.
+                //So its better to use `bottomNavigationBar` to avoid this.
+                Container(
+                  padding: const EdgeInsets.all(2.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(backModel.footer),
+                )
+              ]
+          )
+        )
+        )
+      )
     );
   }
 }

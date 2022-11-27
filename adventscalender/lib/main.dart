@@ -1,3 +1,4 @@
+import 'package:adventscalender/models/back_model.dart';
 import 'package:flutter/material.dart';
 
 import 'Adventstuer.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
       ),
       home: MyHomePage(title: 'Adventskalender für Anni'),
     );
@@ -31,15 +32,33 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-   MyHomePage({super.key, required this.title});
+  MyHomePage({super.key, required this.title});
   final String title;
-  final Map<int,String> tuer ={
-     1: 'Erste Tür',  2: 'Zweit Tür mit ganz viel Text jear und es funzt',  3: '0',  4: '0',
-     5: '0',  6: '0',  7: '0',  8: '0',
-     9: '0', 10: '0', 11: '0', 12: '0',
-    13: '0', 14: '0', 15: '0', 16: '0',
-    17: '0', 18: '0', 19: '0', 20: '0',
-    21: '0', 22: '0', 23: '0', 24: '0',
+  final Map<int,BackModel> tuer ={
+     1: BackModel(head:"Was ich an dir liebe",main: "Einfach Alles",footer: "Matthias"),
+     2: BackModel(head: "Was Gott über dich denkt",main: "",footer: ""),
+     3: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+     4: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+     5: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+     6: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+     7: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+     8: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+     9: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+    10: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+    11: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+    12: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+    13: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+    14: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+    15: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+    16: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+    17: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+    18: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+    19: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+    20: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+    21: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+    22: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+    23: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+    24: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
   };
 
 
@@ -63,11 +82,11 @@ class MyHomePage extends StatelessWidget {
         child: GridView.count(
           // Create a grid with 2 columns. If you change the scrollDirection to
           // horizontal, this produces 2 rows.
-          crossAxisCount: 2,
+          crossAxisCount: 3,
           // Generate 100 widgets that display their index in the List.
           children:
               tuer.entries.map((entry)  {
-                return Adventstuer(Tag: entry.key, Inhalt: entry.value);
+                return Adventstuer(Tag: entry.key, backModel: entry.value);
               }).toList()
         ),
       ),

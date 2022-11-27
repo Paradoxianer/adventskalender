@@ -11,7 +11,7 @@ class Adventstuer extends StatelessWidget {
     DateTime date = DateTime.now();
     return Card(
       elevation: 0.0,
-      margin: EdgeInsets.only(left: 32.0, right: 32.0, top: 20.0, bottom: 0.0),
+      margin: EdgeInsets.only(left: 32.0, right: 32.0, top: 32.0, bottom: 32.0),
       color: Color(0x00000000),
       child: FlipCard(
         flipOnTouch: Tag<date.day, //&& date.month==12,
@@ -28,7 +28,9 @@ class Adventstuer extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(Tag.toString(), style: Theme.of(context).textTheme.headline1),
+              Text(Tag.toString(),
+                  style: Theme.of(context).textTheme.headline1!.apply(fontFamily: 'Cartoon Blocks Christmas')
+              ),
             ],
           ),
         ),
@@ -37,11 +39,14 @@ class Adventstuer extends StatelessWidget {
             color: Color(0xFF007777),
             borderRadius: BorderRadius.all(Radius.circular(8.0)),
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Expanded(child: AutoSizeText(Inhalt))
-            ],
+          child: Center(
+            child:
+              Padding(
+                padding: EdgeInsets.all(15),
+                  child: AutoSizeText(Inhalt,
+                    style: Theme.of(context).textTheme.headline1
+                  )
+              )
           ),
         ),
       ),

@@ -35,14 +35,14 @@ class MyHomePage extends StatelessWidget {
   MyHomePage({super.key, required this.title});
   final String title;
   final Map<int,BackModel> tuer ={
-     1: BackModel(head:"Was ich an dir liebe",main: "Einfach Alles",footer: "Matthias"),
-     2: BackModel(head: "Was Gott über dich denkt",main: "",footer: ""),
-     3: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
-     4: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
-     5: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
-     6: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
-     7: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
-     8: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
+     1: BackModel(head:"Was ich an dir liebe",main: "Dein Durchhaltevermögen",footer: "dein stolzer Matthias"),
+     2: BackModel(head:"Was Gott über dich denkt",main: "Du bist wunderbar gemacht.",footer: "Psalm 139,14"),
+     3: BackModel(head:"Was ich an dir bewundere",main: "Deine Disziplin",footer: "Matthias wars"),
+     4: BackModel(head:"Wie krass wertvoll du für mich und IHN bist",main: "Du hast ihn nur wenig geringer gemacht als die Engel , ja, mit Ruhm und Ehre hast du ihn gekrönt.",footer: "Psalm 8:6"),
+     5: BackModel(head:"Was mich an dir beeindruckt",main: "Dein Stringenz, Dein unglaubliches literatisches Talent und so viel mehr",footer: "schon wieder Matthias"),
+     6: BackModel(head:"Er und ich freuen sich über Dich ",main: "Der Herr , euer Gott, ist in eurer Mitte; und was für ein starker Retter ist er! Von ganzem Herzen freut er sich über euch. Weil er euch liebt, redet er nicht länger über eure Schuld. Ja, er jubelt, wenn er an euch denkt!«",footer: "Zefanja 3:17, HFA"),
+     7: BackModel(head:"Ich freu mich über Deine",main: "Kreativität",footer: "WOW"),
+     8: BackModel(head:"Er sorgt sich um Dich",main: "Macht euch also keine Sorgen! Fragt nicht: Was sollen wir essen? Was sollen wir trinken? Was sollen wir anziehen? Denn um diese Dinge geht es den Heiden, die Gott nicht kennen. Euer Vater im Himmel aber weiß, dass ihr das alles braucht.",footer: "(Matthäus 6, 31-32 NGÜ)"),
      9: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
     10: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),
     11: BackModel(head:"Was ich an dir liebe",main: "",footer: ""),

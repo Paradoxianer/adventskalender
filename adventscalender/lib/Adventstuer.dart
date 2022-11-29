@@ -15,7 +15,7 @@ class Adventstuer extends StatelessWidget {
             EdgeInsets.only(left: 2.0, right: 2.0, top: 2.0, bottom: 2.0),
         color: Color(0x00000000),
         child: FlipCard(
-            flipOnTouch: Tag < date.day, //&& date.month==12,
+            flipOnTouch: Tag < date.day && date.month==12,
             direction: FlipDirection.HORIZONTAL,
             speed: 1000,
             onFlipDone: (status) {
